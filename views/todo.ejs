@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO welcome!</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1047165_9cumw3o9ka8.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="intro-page">
+            <div class="row">
+                <div class="intro-left col-md-7">
+                    <div class="intro-left-icon">
+                        <i class="iconfont icon-shujukanban"></i>
+                        <i class="iconfont icon-yunduanshuaxin"></i>
+                        <i class="iconfont icon-daibanshixiang"></i>
+                        <i class="iconfont icon-kongxinduigou"></i>
+                        <i class="iconfont icon-icon_fabu"></i>
+                    </div>
+                    <div class="listView">
+                        <div class="listView-header">
+                            Your today todo list
+                        </div>
+                        <div class="listView-add">
+                            <form action="" autocomplete="off">
+                                <input type="text" name="item" class="add" placeholder="Add task +" required>
+                            </form>
+                        </div>
+                        <div class="listView-ul">
+                            <ul class="todos">
+                                <% todos.forEach((todo)=>{ %>
+                                <li class="todo">
+                                    <i class="iconfont icon-circleo"></i>
+                                    <%= todo.item %></li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-right col-md-5">
+                    <div class="login">
+                        <button class="login-btn">Login</button>
+                    </div>
+                    <div class="intro-logo">
+                        <img src="./deer.png">
+                    </div>
+
+                    <div class="info">
+                        Which layout do you prefer?
+                    </div>
+
+                    <div class="modes">
+                        <div class="center-block" style="width: 480px; height: 130px;">
+                            <div class="mode">
+                                <i class="iconfont icon-calendar"></i>
+                                <div class="mode-text">Week planner</div>
+                            </div>
+                            <div class="mode active">
+                                <i class="iconfont icon-menu"></i>
+                                <div class="mode-text">List view</div>
+                            </div>
+                            <div class="mode">
+                                <i class="iconfont icon-clock"></i>
+                                <div class="mode-text">Overview</div>
+                            </div>
+                        </div>
+
+                        <div class="nextBtn">
+                            <button class="next">Next</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="./animations.js"></script>
+    <script src="./ajax.js"></script>
+    <script src="./Sortable.min.js"></script>
+    <script>
+        $('.listView').fadeIn(1000);
+        $('.listView').css('transform', 'translate(0, 0)');
+        $('.info').fadeIn(1000);
+        $('.modes').fadeIn(2000);
+        $('.modes').css('top', '13%');
+
+        // use sortable
+        let ul = document.querySelector('.todos');
+        let sortable = new Sortable(ul, {
+            animation: 150,
+            ghostClass: 'blue-background-class'
+        });
+    </script>
+
+</html>

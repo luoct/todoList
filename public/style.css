@@ -1,0 +1,294 @@
+/* 引用的iconfont在线的字体  */
+@font-face {font-family: 'webfont';
+    src: url('https://at.alicdn.com/t/webfont_zhqts7a89f.eot'); /* IE9*/
+    src: url('https://at.alicdn.com/t/webfont_zhqts7a89f.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://at.alicdn.com/t/webfont_zhqts7a89f.woff') format('woff'), /* chrome、firefox */
+    url('https://at.alicdn.com/t/webfont_zhqts7a89f.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('https://at.alicdn.com/t/webfont_zhqts7a89f.svg#站酷小薇体') format('svg'); /* iOS 4.1- */
+}
+input:-webkit-autofill {
+    background: transparent!important;
+}
+
+
+.intro-left {
+    height: 100vh;
+    padding: 0 70px;
+    overflow: hidden;
+}
+.intro-left-icon {
+    height: 100vh;
+    z-index: 999;
+    position: fixed;
+    z-index: -999;
+    width: 60%;
+}
+.intro-left-icon .iconfont {
+    position: absolute;
+    font-size: 54px;
+    display: inline-block;
+    transition: all 5s;
+    animation: rotating 30s infinite linear;
+}
+@keyframes rotating{
+    0% { transform:rotate(0deg) }
+    to { transform:rotate(1turn) }
+}
+
+.icon-shujukanban { color: #e4605f; top: 30%; left: 17%; }
+.icon-yunduanshuaxin { color: #ffa800; top: 18%; left: 76%; }
+.icon-daibanshixiang { color: #4c84ff; top: 70%; left: 4%; }
+.icon-kongxinduigou { color: #3ada93; top: 58%; left: 40%; }
+.icon-icon_fabu { color: #4c84ff; top: 72%; left: 82%; }
+
+.intro-left-content {
+    position: relative;
+    top: 63%;
+    transition: all 3s;
+}
+
+.intro-left-headText {
+    margin-top: 60px;
+    font-family: 'webfont';
+    font-size: 66px;
+    font-weight: 500;
+    line-height: 66px;
+    overflow-wrap: break-word;
+}
+
+.intro-left-text {
+    margin-top: 20px;
+    font-size: 150%;
+    font-weight: 300;
+    line-height: 1.25;
+    padding-left: 8px;
+}
+.intro-right {
+    height: 100vh;
+    box-shadow: 0 9px 18px rgba(0,0,0,.2), 0 15px 12px rgba(0,0,0,.12);
+}
+.login {
+    position: relative;
+}
+.login-btn {
+    cursor: pointer;
+    width: 90px;
+    height: 33px;
+    color: #333;
+    border: 1px solid #7d7d7d;
+    background: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 33px;
+    padding: 0;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+}
+.login-btn:hover {
+    color: #fff;
+    background-color: #3ada93;
+    border: 1px solid transparent;
+}
+.intro-logo {
+    width: 190px;
+    position: relative;
+    top: 10%;
+    margin: auto;
+}
+.goto {
+    width: 100%;
+    position: relative;
+    font-weight: lighter;
+    top: 42%;
+    font-family: 'webfont';
+}
+.goto-text {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.goto-tips {
+    font-size: 20px;
+    font-weight: lighter;
+    color: #444;
+    text-align: center;
+}
+.goto-input {
+    font-size: 26px;
+    outline: none;
+    width: 90%;
+    padding: 0;
+    border-radius: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    height: 65px;
+    border: 0;
+    border-bottom: 1px solid #777;
+    background-color: transparent;
+}
+.goto-input:focus {
+    border-bottom: 1px solid #4c84ff;
+}
+.goto-input::-webkit-input-placeholder {
+    font-size: 26px;
+    color: #4c84ff;
+    padding: 0;
+    text-align: center;
+    background: hsla(0, 0%, 100%, 0.4);
+    line-height: 65px;
+}
+
+/**
+    rodo view
+*/
+.info {
+    position: relative;
+    top: 11%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: lighter;
+    font-family: 'consolas'
+}
+.modes {
+    position: relative;
+    top: 10%;
+    text-align: center;
+    transition: all 2s;
+}
+.mode {
+    width: 130px;
+    height: 130px;
+    border: 1px solid black;
+    float: left;
+    margin: 0 15px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 9px 18px rgba(0,0,0,.2), 0 15px 12px rgba(0,0,0,.12);
+    background: #f0f3f4;
+    text-align: center;
+}
+.active {
+    background: #fff;
+    border-color: rgb(76, 132, 255);
+}
+.mode:not(.active):hover .iconfont {
+    color: #3ada93;
+}
+.mode .iconfont {
+    font-size: 28px;
+    position: absolute;
+    top: 12%;
+    margin-left: -14px;
+}
+.mode-text {
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    margin-top: 80px;
+}
+.next {
+    margin-top: 45px;
+    width: 120px;
+    height: 32px;
+    font-size: 16px;
+    background: #4c84ff;
+    color: #fff;
+    border: 1px solid rgba(71,151,241,.5);
+}
+.next:hover {
+    background: #3ada93;
+    color: #fff;
+    border-color: transparent;
+}
+.listView {
+    transform: translate(0, 20px);
+    transition: all 1.5s;
+}
+.listView-header {
+    margin-top: 40px;
+    font-size: 28px;
+    font-family: 'Comic Sans MS';
+    text-align: center;
+    height: 50px;
+    line-height: 50x;
+}
+.listView-add {
+    text-align: center;
+}
+.add {
+    font-size: 18px;
+    width: 100%;
+    outline: none;
+    text-align: center;
+    height: 40px;
+    display: block;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    border-bottom: .5px solid rgba(41,41,41,.3);
+}
+.add:focus {
+    border-bottom: 1px solid #4c84ff;
+}
+.todos {
+    list-style: none;
+    padding: 0;
+}
+.todo {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-family: 'consolas';
+    color: #444;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.todo:hover {
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.12), 0 4px 15px 0 rgba(0,0,0,.11);
+}
+.todo .iconfont {
+    font-size: 18px;
+    color: #3ada93;
+}
+
+/* 初始化不显示 */
+.modes, .info, .listView {
+    display: none;
+}
+
+
+
+@media (max-width: 767px) { 
+    .intro-left {
+        padding: 0 10px;
+        text-align: center;
+        overflow: hidden;
+    }
+    .intro-left-headText {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+    .goto-tips {
+        font-size: 13px;
+    }
+    .modes .center-block {
+        width: inherit!important;
+    }
+    .mode {
+        margin: 0;
+        width: 33%;
+    }
+    .mode:not(.active) {
+        display: inline-block;
+        /* transform: rotateY(45deg); */
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    
+}
