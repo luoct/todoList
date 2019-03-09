@@ -108,7 +108,7 @@ node server.js
 ## 路由
 
 ```
- 	app.get('/todo', (req, res) => {
+    app.get('/todo', (req, res) => {
         Todo.find({}, (err, data) => {
             res.render('todo.ejs', { todos: data });
         });
@@ -117,7 +117,7 @@ node server.js
 ```
 
 ```
-	app.post('/todo', urlencodedParser, (req, res, data) => {
+    app.post('/todo', urlencodedParser, (req, res, data) => {
         //把表单传过来的数据添加到数据库中
         //data.push(req.body);
         Todo(req.body).save((err, data) => {
@@ -128,7 +128,7 @@ node server.js
 ```
 
 ```
-	app.delete('/todo/:item', (req, res) => {
+    app.delete('/todo/:item', (req, res) => {
         Todo.find({ item: req.params.item.replace(/-/g, ' ') }).remove((err, data) => {
             if (err) throw err;
             res.json(data);
